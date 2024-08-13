@@ -1,5 +1,5 @@
 {% set name = "types-aiobotocore" %}
-{% set version = "2.13.1" %}
+{% set version = "2.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types_aiobotocore-{{ version }}.tar.gz
-  sha256: 88909531df072b6d82b006ce8377388659dab62c8c345c3ded5f17b63589c0f4
+  sha256: beb7ad90f02885eacf8aa37d455235a3df1dae4de0ef579570bf5e451f612983
 
 build:
   noarch: python
