@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types_aiobotocore-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/types_aiobotocore-{{ version }}.tar.gz
   sha256: 63e6a456ccc33e2ca350aae588cfdbbb94bdecf3533e6a8578f736c5b2b85607
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - botocore-stubs
     - typing-extensions >=4.1.0
 
@@ -31,6 +31,7 @@ test:
     - if not exist %SP_DIR%\\aiobotocore-stubs\\__init__.pyi exit 1  # [win]
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/youtype/mypy_boto3_builder
