@@ -28,6 +28,12 @@ requirements:
     - typing-extensions >=4.1.0
 
 tests:
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
   - package_contents:
       site_packages:
         - aiobotocore-stubs/__init__.pyi
