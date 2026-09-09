@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: types-aiobotocore
-  version: "3.9.0"
+  version: "3.9.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/types_aiobotocore-${{ version }}.tar.gz
-  sha256: 00fc52e98c9d65fe6716f246e6e03ce18f0b6727aa580ab5b274fde6844b6142
+  sha256: d86497c3d821ca3e5b0c4705ad85066672c57c64b715333500979f4565844d4e
 
 build:
   number: 0
